@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">TaskX</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="destination_image">invalid image</string>  <string name="book_now">Book Now</string>
+    <string name="todo">TODO</string>
+    <string name="drawer_open" />
+    <string name="drawer_close">\n</string>
+    <string name="menu_logout">Logout\n</string>
+    <string name="menu_about">About\n</string>
+    <string name="menu_booked_places">Booked places\n</string>
+    <string name="help">Help</string>
+    <string name="menu_exit_app">Close app\n</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="name">Name</string>
+    <string name="updateProfile">Update Profile</string>
+    <string name="unknown">Unknown</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="email">Email\n</string>
+
+    <string-array name="gender_options">
+        <item>Sex</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="finished">Finished</string>
+    <string name="create_task">Create Task</string>
+    <string name="enter_task_description">Enter Task Description</string>
+    <string name="save_task">Save Task</string>
+    <string name="no_tasks_finished_yet">No tasks Finished Yet</string>
+</resources>

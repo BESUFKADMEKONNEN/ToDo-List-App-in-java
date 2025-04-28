@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <!-- ScrollView to make the content scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Main Content Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:fitsSystemWindows="true">
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorSecondary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <!-- Content Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:layout_height="wrap_content">
+
+                <!-- Task Title -->
+                <TextView
+                    android:id="@+id/taskTitleLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task Title"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/taskTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:hint="Enter Task Title"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:textColor="@color/colorTextWhite"
+
+                    android:textColorHint="@color/colorTextWhite"
+                    app:layout_constraintTop_toBottomOf="@id/taskTitleLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Task Description -->
+                <TextView
+                    android:id="@+id/taskDescriptionLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task Description"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/taskTitle"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                    android:id="@+id/taskDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:hint="Enter Task Description"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_bg"
+
+                    android:textColorHint="@color/colorTextWhite"
+                    android:textColor="@color/colorTextWhite"
+                    android:gravity="top"
+                    app:layout_constraintTop_toBottomOf="@id/taskDescriptionLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Task Due Date -->
+                <TextView
+                    android:id="@+id/taskDueDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task Due Date"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/taskDescription"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <android.widget.DatePicker
+                    android:id="@+id/dueDatePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:calendarTextColor="@color/colorTextWhite"
+
+                    android:textColorHint="@color/colorTextWhite"
+                    android:textColor="@color/colorTextWhite"
+                    android:outlineSpotShadowColor="@color/colorTextWhite"
+                    android:outlineAmbientShadowColor="@color/colorTextWhite"
+                    android:background="@color/colorSurfaceWhite"
+                    app:layout_constraintTop_toBottomOf="@id/taskDueDateLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Task Due Time -->
+                <TextView
+                    android:id="@+id/taskDueTimeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task Due Time"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorTextWhite"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/dueDatePicker"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- Time Picker -->
+                <android.widget.TimePicker
+                    android:id="@+id/dueTimePicker"
+                    style="@style/CustomTimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorSurfaceWhite"
+
+                    android:textColorHint="@color/colorTextWhite"
+                    android:textColor="@color/colorTextWhite"
+                    android:numbersTextColor="@color/colorTextWhite"
+                    android:timePickerMode="spinner"
+                    app:layout_constraintTop_toBottomOf="@id/taskDueTimeLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save_task"
+                android:textSize="16sp"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_button"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Navigation View -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        android:background="@color/colorPrimary"
+
+        app:itemTextColor="@color/colorTextWhite"
+        app:menu="@menu/activity_main_drawer" />
+</androidx.drawerlayout.widget.DrawerLayout>

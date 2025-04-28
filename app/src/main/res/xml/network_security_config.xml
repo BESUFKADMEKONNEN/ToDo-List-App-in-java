@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow HTTPS traffic for Wikipedia (as Wikipedia uses HTTPS) -->
+    <domain-config>
+        <domain includeSubdomains="true">en.wikipedia.org</domain>
+    </domain-config>
+</network-security-config>

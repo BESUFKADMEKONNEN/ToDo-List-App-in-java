@@ -1,0 +1,22 @@
+<resources>
+    <style name="Theme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Set background color to white -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!-- Set the logo/icon -->
+        <item name="android:icon">@mipmap/ic_icon</item>
+        <!-- Ensure the logo appears centered in the splash screen -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <style name="CustomSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:popupBackground">@android:color/transparent</item> <!-- Optional for dropdown background -->
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CustomTimePicker" parent="android:Widget.Material.TimePicker">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/colorTextWhite</item>
+    </style>
+</resources>

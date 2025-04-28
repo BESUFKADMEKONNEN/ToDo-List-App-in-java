@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/colorBlack">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#FFFFFF" /> <!-- Optional background color -->
+            <corners android:radius="50dp" /> <!-- This will round the corners to make the shape circular -->
+        </shape>
+    </item>
+</ripple>

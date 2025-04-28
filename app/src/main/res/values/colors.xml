@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorSurfaceWhite">#575555</color>
+    <color name="colorPrimary">#000007</color>
+    <color name="colorSecondary">#01256D</color>
+    <color name="colorSecondaryLight">#053998</color>
+    <color name="colorSecondaryDark">#011635</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorAccent">#3498DB</color>
+<!--    fot the themes in the themes-->
+    <color name="purple_700">#3700B3</color> <!-- Primary variant -->
+    <color name="white">#FFFFFF</color>
+    <color name="colorInputFields">#3B3A3A</color>
+
+
+    <!-- Secondary colors -->
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color> <!-- Secondary variant -->
+</resources>
