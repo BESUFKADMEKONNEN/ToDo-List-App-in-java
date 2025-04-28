@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
@@ -29,8 +29,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:padding="16dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="16dp">
 
                 <!-- Task Title -->
                 <TextView
@@ -68,8 +68,6 @@
                     android:text="Task Description"
                     android:textSize="18sp"
                     android:textColor="@color/colorTextWhite"
-
-                    android:textColorHint="@color/colorTextWhite"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
                     app:layout_constraintTop_toBottomOf="@id/taskTitle"
@@ -82,9 +80,9 @@
                     android:hint="Enter Task Description"
                     android:textSize="18sp"
                     android:padding="10dp"
-                    android:background="@drawable/edit_text_bg"
                     android:gravity="top"
-android:textColor="@color/colorTextWhite"
+                    android:background="@drawable/edit_text_bg"
+                    android:textColor="@color/colorTextWhite"
                     android:textColorHint="@color/colorTextWhite"
                     app:layout_constraintTop_toBottomOf="@id/taskDescriptionLabel"
                     app:layout_constraintStart_toStartOf="parent"
@@ -104,20 +102,12 @@ android:textColor="@color/colorTextWhite"
                     app:layout_constraintTop_toBottomOf="@id/taskDescription"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <android.widget.DatePicker
+                <DatePicker
                     android:id="@+id/dueDatePicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-
-                    android:textColorHint="@color/colorTextWhite"
-                    android:textColor="@color/colorTextWhite"
-                    android:outlineSpotShadowColor="@color/colorTextWhite"
-                    android:outlineAmbientShadowColor="@color/colorTextWhite"
                     android:background="@color/colorSurfaceWhite"
-
-
-                    android:calendarTextColor="@color/colorTextWhite"
                     app:layout_constraintTop_toBottomOf="@id/taskDueDateLabel"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
@@ -135,22 +125,16 @@ android:textColor="@color/colorTextWhite"
                     app:layout_constraintTop_toBottomOf="@id/dueDatePicker"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <android.widget.TimePicker
+                <TimePicker
                     android:id="@+id/dueTimePicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:timePickerMode="spinner"
                     android:background="@color/colorSurfaceWhite"
-
-                    android:textColorHint="@color/colorTextWhite"
-                    android:textColor="@color/colorTextWhite"
-                    android:numbersTextColor="@color/colorTextWhite"
-                    android:numbersBackgroundColor="@color/colorInputFields"
                     app:layout_constraintTop_toBottomOf="@id/taskDueTimeLabel"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
-
 
                 <!-- Recorded Date Time Label -->
                 <TextView
@@ -160,10 +144,9 @@ android:textColor="@color/colorTextWhite"
                     android:text="Recorded Date Time"
                     android:textSize="18sp"
                     android:textColor="@color/colorTextWhite"
-
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/dueTimePicker"
+                    app:layout_constraintTop_toBottomOf="@id/dueTimePicker"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <!-- Recorded Date Time Display -->
@@ -174,9 +157,9 @@ android:textColor="@color/colorTextWhite"
                     android:text="N/A"
                     android:textSize="16sp"
                     android:textColor="@color/colorTextWhite"
-                    app:layout_constraintTop_toBottomOf="@+id/recordedDateTimeLabel"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/recordedDateTimeLabel"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <!-- Task Completion CheckBox -->
                 <TextView
@@ -188,20 +171,20 @@ android:textColor="@color/colorTextWhite"
                     android:textColor="@color/colorTextWhite"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
-                    app:layout_constraintTop_toBottomOf="@+id/recordedDateTime"
+                    app:layout_constraintTop_toBottomOf="@id/recordedDateTime"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <android.widget.CheckBox
+                <CheckBox
                     android:id="@+id/isChecked"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Completed"
-                    android:textColor="@drawable/rounded_button"
+                    android:textColor="@color/colorTextWhite"
                     app:layout_constraintTop_toBottomOf="@id/taskIsCheckedLabel"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="20dp" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -214,7 +197,6 @@ android:textColor="@color/colorTextWhite"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp">
 
-                <!-- New button with left arrow -->
                 <Button
                     android:id="@+id/backButton"
                     android:layout_width="wrap_content"
@@ -224,10 +206,9 @@ android:textColor="@color/colorTextWhite"
                     android:background="@drawable/rounded_button"
                     android:textColor="@color/colorTextBlack"
                     android:drawableLeft="@drawable/ic_arrow_left"
-                     android:drawablePadding="8dp"
-                     android:layout_marginEnd="8dp"/>
+                    android:drawablePadding="8dp"
+                    android:layout_marginEnd="8dp" />
 
-                <!-- Edit button -->
                 <Button
                     android:id="@+id/editButton"
                     android:layout_width="wrap_content"
@@ -236,9 +217,8 @@ android:textColor="@color/colorTextWhite"
                     android:textSize="16sp"
                     android:background="@drawable/rounded_button"
                     android:textColor="@color/colorTextBlack"
-                    android:layout_marginEnd="8dp"/>
+                    android:layout_marginEnd="8dp" />
 
-                <!-- Save button -->
                 <Button
                     android:id="@+id/saveButton"
                     android:layout_width="wrap_content"
@@ -246,7 +226,7 @@ android:textColor="@color/colorTextWhite"
                     android:text="@string/save_task"
                     android:textSize="16sp"
                     android:background="@drawable/rounded_button"
-                    android:textColor="@color/colorTextBlack"/>
+                    android:textColor="@color/colorTextBlack" />
             </LinearLayout>
 
         </LinearLayout>
@@ -257,15 +237,10 @@ android:textColor="@color/colorTextWhite"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@color/colorPrimary"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:itemTextColor="@color/colorTextWhite"
-        android:background="@color/colorPrimary"
         app:menu="@menu/activity_main_drawer" />
+
 </androidx.drawerlayout.widget.DrawerLayout>
-
-
-
-
-
-

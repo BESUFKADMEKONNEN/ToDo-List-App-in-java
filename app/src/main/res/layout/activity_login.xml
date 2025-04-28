@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="@color/colorSurfaceWhite">
+    android:background="@color/colorPrimary">
 
     <!-- Card-style container -->
     <LinearLayout
@@ -21,8 +21,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:textColor="@color/colorTextWhite"
+app:hintTextColor="@color/colorTextBlack"
+            android:textColor="@color/colorTextBlack"
             android:layout_marginBottom="16dp"
             android:hint="Username"
             app:startIconDrawable="@android:drawable/ic_menu_myplaces">
@@ -32,7 +32,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/colorTextWhite"
+
+                app:hintTextColor="@color/colorTextBlack"
+                android:textColor="@color/colorTextBlack"
                 android:padding="12dp"
                 android:minHeight="48dp"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -43,9 +45,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            app:hintTextColor="@color/colorTextWhite"
+            app:hintTextColor="@color/colorTextBlack"
 
-            android:textColor="@color/colorTextWhite"
+            android:textColor="@color/colorTextBlack"
             android:hint="Password"
             app:endIconMode="password_toggle"
             app:startIconDrawable="@android:drawable/ic_lock_lock"
@@ -57,7 +59,8 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
 
-                android:textColor="@color/colorTextWhite"
+                app:hintTextColor="@color/colorTextBlack"
+                android:textColor="@color/colorTextBlack"
                 android:padding="12dp"
                 android:minHeight="48dp"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -68,6 +71,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
+
+            app:hintTextColor="@color/colorTextWhite"
             android:textColor="@android:color/white"
             android:background="@drawable/rounded_button"
             android:minHeight="48dp"
